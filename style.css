@@ -1,4 +1,4 @@
-/* this three properties in universal selctor is good practise to follow */
+/* these three properties in universal selctor is good practise to follow */
 * {
   margin: 0;
   padding: 0;
@@ -6,48 +6,43 @@
 }
 
 .wrapper {
-  /* overflow-x hidden se, right scroll band ho jata hai, y auto se niche jota hai scroll */
   overflow-x: hidden;
   overflow-y: auto;
-  /* meri poori website ka content is wrapper ke ander ayega, so iski height itni rakhli */
   height: 100vh;
 
-  /* 3d view / z-axis ko on karne ke liye, perspective ko on karna padta hai, value koi bhi do, koi farak ni padta, nas value do. */
+  /* to use 3d-view / z-axis we need to set the perspective on by giving some value  */
   perspective: 10px;
 }
 
-/* items ko center mein align karna tha, isliye, conatiner tag banaya aur ise display flex kar dia */
+/* our aim to place the items on center, so i made a conatiner and set its property to display flex */
 .container {
-  /* pictures ko absolute karna hai, isliye unke parent element ko(conatiner) ko non static banana hoga, isliye iski postion relative di */
+  /* to make the pictures absolute, i need to set there closest parent as non static element */
   position: relative;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
-  /* iske bina 3d nature nahin ata, iske bina images will stick to each other and will behave like as they are in 2d */
+  /* to give 3-d nature to pictures, this is need to be done, without this, the images will stick to each other and will be viewd as they are in 2-d */
   transform-style: preserve-3d;
   height: 100%;
-  /* layering vaali saari cheej/ problems z-index se solve karte hain */
+  /* to handle layering properties, z-index property is used */
   z-index: -1;
 }
 
 .background {
-  /* transform se ham ise door leke jaa rahe hain, parallax effect create karne ke liye */
+  /* to create a parallax effect, the background image need to set far from the viewer, and then scaled to cover the whole device width */
   transform: translateZ(-40px);
   /* door hone se uska size chota ho jayega, to image ko bada karne ke liye, scale kia */
   scale: 6;
 }
 
 .foreground {
-  /* background ko slow move karvana, isliye use jyada door kia, ise(foreground ko kam door karenge */
+  /*foreground image is set relatively less far, this will create a parallax effect, wherein the background image will be seen moving slowly as compared to foreground image */
   transform: translateZ(-20px);
-  /* scale ka same logic as above(background vala) */
   scale: 4;
 }
 
 .background,
 .foreground {
-  /* puctures ko ek doosre ke upar rakhna hai, isliye inki position absolute di */
   position: absolute;
   height: 100%;
   width: 100%;
