@@ -21,11 +21,11 @@ To get a local copy up and running follow these simple steps:
 ### Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/your-repo-name.git
+    git clone https://github.com/bansalrachit19/Parallax-webpage.git
     ```
 2. Navigate to the project directory:
     ```sh
-    cd your-repo-name
+    cd Parallax-webpage
     ```
 3. Open `index.html` in your web browser to view the webpage.
 
