@@ -2,6 +2,7 @@
 
 ## Description
 This project is a webpage that incorporates parallax scrolling effects along with various other styling techniques and animations. It is designed to help me brush up and enhance my HTML and CSS skills.
+https://bansalrachit19.github.io/Parallax-webpage/
 
 ## Features
 - **Parallax Scrolling**: Smooth and interactive scrolling effect.
